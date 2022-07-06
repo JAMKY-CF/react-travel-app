@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Route, Routes
-} from "react-router-dom";
+} from 'react-router-dom';
 import React from 'react';
 //import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
@@ -19,23 +19,23 @@ function App() {
       <Router>
         <div id='main'>
           <Routes>
-              <Route
-                exact path="/about"
-                element={<About />}
-              >
-              </Route>
+            <Route
+              exact path="/about"
+              element={<About />}
+            >
+            </Route>
 
-              <Route 
-                exact path="/users"
-                element={<User />}
-              >
-              </Route>
-              
-              <Route
-                path="/"
-                element={<Home />}
-              >
-              </Route>
+            <Route
+              exact path="/users"
+              element={<User />}
+            >
+            </Route>
+
+            <Route
+              path="/"
+              element={<Home />}
+            >
+            </Route>
           </Routes>
         </div>
       </Router>
