@@ -17,7 +17,7 @@ class CreatorCards extends React.Component {
       return (
         <>
           <Card key={idx} style={{ width: '25rem' }}>
-            <Card.Img variant='top' src='./pexels-rompalli-harish-2315807.jpg'/>
+            <Card.Img variant='top' src='src/images/pexels-rompalli-harish-2315807.jpg'/>
             <Card.Body>
               <Card.Title>{person.name}</Card.Title>
               <Card.Text>

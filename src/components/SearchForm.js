@@ -55,7 +55,7 @@ class SearchForm extends React.Component {
           </Form.Group>
           <Form.Group className="searchForm" controlId="formDate">
             <Form.Label>Date</Form.Label>
-            <Form.Control type="date" min='2022/07/04' max='2022/12/31' defaultValue={this.state.todaysDate} onChange={this.handleDate} />
+            <Form.Control type="date" min={this.state.todaysDate} max='2022-12-31' defaultValue={this.state.todaysDate} onChange={this.handleDate} />
           </Form.Group>
 
           <Button variant="primary" type="submit" onClick={this.handleSubmitClick}>
