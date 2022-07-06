@@ -1,4 +1,4 @@
-
+import { withAuth0 } from '@auth0/auth0-react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -47,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuth0(App);
