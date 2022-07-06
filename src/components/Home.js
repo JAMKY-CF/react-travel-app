@@ -1,7 +1,6 @@
-
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
 import SearchForm from './SearchForm';
+import '../css/Home.css';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -11,14 +10,13 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <>
+      <div id='home'>
         <h1>THIS IS THE HOME PAGE. WELCOME.</h1>
-        <p>{this.state.currentDate.getFullYear()}/{this.state.currentDate.getMonth()}/{this.state.currentDate.getDate()}</p>
         <SearchForm
           currentDate={this.state.currentDate}
         />
 
-      </>
+      </div>
     );
   }
 }

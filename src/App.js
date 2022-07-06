@@ -5,7 +5,6 @@ import {
   Route, Routes
 } from 'react-router-dom';
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -14,10 +13,12 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <>
-      <Header />
+    <div id='app-app'>
+      < div id='app-header' >
+        <Header />
+      </div >
       <Router>
-        <div id='main'>
+        <div id='app-main'>
           <Routes>
             <Route
               exact path="/about"
@@ -39,8 +40,10 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <Footer />
-    </>
+      <div id='app-footer'>
+        <Footer />
+      </div>
+    </div >
   );
 }
 

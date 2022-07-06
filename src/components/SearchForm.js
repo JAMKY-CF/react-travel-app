@@ -1,7 +1,9 @@
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import '../css/SearchForm.css';
+
+
 
 class SearchForm extends React.Component {
   constructor(props) {
