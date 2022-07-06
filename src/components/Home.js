@@ -8,6 +8,9 @@ class Home extends React.Component {
       currentDate :new Date(),
     };
   }
+
+
+
   render() {
     return (
       <div id='home'>
