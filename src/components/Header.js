@@ -1,24 +1,20 @@
 
 import React from 'react';
+import LoginButton from './LoginButton';
+
+import Navdropdown from './Navdropdown';
+//import { Image } from 'react-bootstrap';
 //import ReactDOM from 'react-dom/client';
 
-function Header(){
+function Header() {
 
-  return(
-    <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-          <a href="/About">About</a>
-          </li>
-          <li>
-          <a href="/User">User</a>
-          </li>
-        </ul>
-      </nav> 
-
+  return (
+    <>
+      <Navdropdown />
+      <LoginButton />
+      <img src="holder.js/100px180" />
+    </>
   );
+
 }
 export default Header;
