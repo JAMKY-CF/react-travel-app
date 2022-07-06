@@ -27,6 +27,7 @@ class SearchForm extends React.Component {
     e.preventDefault();
     console.log('This is the value of the submitted city text input: ', this.state.cityInput);
     console.log('The date selected: ', this.state.selectedDate);
+    // api call to 3001 server at path '3001/
   };
 
   handleOnInput = (e) => {
