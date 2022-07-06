@@ -27,7 +27,7 @@ function App() {
             </Route>
 
             <Route
-              exact path="/users"
+              exact path="/user"
               element={<User />}
             >
             </Route>
