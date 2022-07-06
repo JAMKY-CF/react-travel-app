@@ -1,24 +1,17 @@
 
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
+import '../css/Footer.css';
 
-function Footer(){
+class Footer extends React.Component {
+  render() {
+    return (
+      <section id='footer'>
+        <p> This Project Brought to you by Team JAMKY and Code Fellows</p>
+        <p> Please feel free to check out our <a href='https://github.com/JAMKY-CF'>GitHub</a></p>
+      </section>
 
-  return(
-    <nav>
-        <ul>
-        <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-          <a href="/About">About</a>
-          </li>
-          <li>
-          <a href="/User">User</a>
-          </li>
-        </ul>
-      </nav> 
-
-  );
+    );
+  }
 }
+
 export default Footer;
