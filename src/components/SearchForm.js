@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../css/SearchForm.css';
-
+// import axios from 'axios';
 
 
 class SearchForm extends React.Component {
@@ -26,8 +26,8 @@ class SearchForm extends React.Component {
 
   handleSubmitClick = async (e) => {
     e.preventDefault();
-    console.log('This is the value of the submitted city text input: ', this.state.cityInput);
-    console.log('The date selected: ', this.state.selectedDate);
+    //console.log('This is the value of the submitted city text input: ', this.state.cityInput);
+    //console.log('The date selected: ', this.state.selectedDate);
     // api call to 3001 server at path '3001
     // or call function at home to populate wx display and event display
   };
