@@ -8,7 +8,7 @@ import '../css/weatherDisplay.css';
 import { withAuth0 } from '@auth0/auth0-react';
 import WeatherDisplay from './WeatherDisplay';
 import SavedSearches from './SavedSearches';
-import EventDisplay from './EventDisplay';
+import EventDisplay from './eventDisplay';
 
 class Home extends React.Component {
   constructor(props) {
