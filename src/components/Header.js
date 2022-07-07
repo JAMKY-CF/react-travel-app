@@ -1,5 +1,5 @@
 import '../css/Header.css';
-import {withAuth0 } from '@auth0/auth0-react';
+import { withAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
@@ -16,12 +16,12 @@ class Header extends React.Component {
 
     return (
       <>
-      <FontAwesomeIcon icon="facebook" />
-      {/* <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-      <FontAwesomeIcon icon="fa-brands fa-pinterest" />
-      <FontAwesomeIcon icon="fa-solid fa-link" /> */}
+        <FontAwesomeIcon icon="facebook" />
+        {/* <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+        <FontAwesomeIcon icon="fa-brands fa-pinterest" />
+        <FontAwesomeIcon icon="fa-solid fa-link" /> */}
         <Navdropdown />
-        {this.props.auth0.isAuthenticated?<LogoutButton />:<LoginButton />}
+        {this.props.auth0.isAuthenticated ? <LogoutButton /> : <LoginButton />}
         <img src="holder.js/100px180" />
       </>
     );
