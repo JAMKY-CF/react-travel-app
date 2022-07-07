@@ -1,6 +1,9 @@
 .searchForm{
-  margin: 5px;
+  border:3px dashed yellow;
 }
-#formDate{
-  margin:20px;
+.formSubmitBtn{
+  width:80%;
+  margin:3% 10%;
+
 }
+

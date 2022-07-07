@@ -8,9 +8,10 @@ import '../css/SearchForm.css';
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
-    let day = this.props.currentDate.getDate();
-    let month = this.props.currentDate.getMonth() + 1;
-    let year = this.props.currentDate.getFullYear();
+    let currentDate=new Date();
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth() + 1;
+    let year = currentDate.getFullYear();
     if (month < 10)
       month = '0' + month;
     if (day < 10)
@@ -27,7 +28,8 @@ class SearchForm extends React.Component {
     e.preventDefault();
     console.log('This is the value of the submitted city text input: ', this.state.cityInput);
     console.log('The date selected: ', this.state.selectedDate);
-    // api call to 3001 server at path '3001/
+    // api call to 3001 server at path '3001
+    // or call function at home to populate wx display and event display
   };
 
   handleOnInput = (e) => {
@@ -48,22 +50,22 @@ class SearchForm extends React.Component {
   render() {
 
     return (
-      <>
-        <Form>
-          <Form.Group className="searchForm" controlId="formCityName">
+      <div className='searchFromDiv'>
+        <Form className="searchForm">
+          <Form.Group controlId="formCityName">
             <Form.Label>Destination City</Form.Label>
             <Form.Control type="text" placeholder="Enter city..." onChange={this.handleOnInput} />
           </Form.Group>
-          <Form.Group className="searchForm" controlId="formDate">
+          <Form.Group  controlId="formDate">
             <Form.Label>Date</Form.Label>
             <Form.Control type="date" min={this.state.todaysDate} max='2022-12-31' defaultValue={this.state.todaysDate} onChange={this.handleDate} />
           </Form.Group>
 
-          <Button variant="primary" type="submit" onClick={this.handleSubmitClick}>
+          <Button className='formSubmitBtn' variant="primary" type="submit" onClick={this.handleSubmitClick}>
             Search
           </Button>
         </Form>
-      </>
+      </div>
 
     );
   }

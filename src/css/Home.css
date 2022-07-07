@@ -1,6 +1,18 @@
-#home{
-  display:flex;
+#home {
+  display: flex;
   flex-direction: column;
-  border:2px solid black;
+  border: 2px solid black;
   align-items: center;
+}
+
+.eventsDiv {
+  border: 2px dashed red;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.eventsDiv h2 {
+  display: block;
+  color: pink;
 }

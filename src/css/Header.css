@@ -1,0 +1,27 @@
+#dropdownBtn{
+  float:right;
+  position:relative;
+  margin: 20px;
+}
+#dropdownBtn:hover{
+  border:2px solid orange;
+}
+
+#loginBtn{
+  float:left;
+  position:relative;
+  margin:20px;
+}
+
+#logoutBtn{
+  float:left;
+  position:relative;
+  margin:20px;
+}
+
+#loginBtn:hover{
+  border:2px solid orange;
+}
+#logout:hover{
+  border:2px solid orange;
+}

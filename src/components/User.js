@@ -31,6 +31,9 @@ class User extends React.Component {
     }
     console.log('I am done with getprofile function');
   };
+
+
+
   render() {
     console.log('I am in the render');
     this.getProfile();
@@ -39,6 +42,7 @@ class User extends React.Component {
         <h1>WELCOME TO THE USER PAGE</h1>
         <Profile />
         <ProfileForm />
+        {/* <SavedSearches /> */}
       </>
     );
   }
