@@ -7,10 +7,10 @@ function BasicButtonOne() {
 
   return (
 
-    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+    <DropdownButton id="dropdownBtn" title="Menu" variant='success'>
+      <Dropdown.Item href="/user">Profile</Dropdown.Item>
+      <Dropdown.Item href="/about">About</Dropdown.Item>
+      <Dropdown.Item href="/">Home</Dropdown.Item>
     </DropdownButton>
   );
 }
