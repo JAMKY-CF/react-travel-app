@@ -13,9 +13,9 @@
 }
 
 #loginBtn{
-  /* float:left; */
-  /* position:relative; */
-  margin-left: 1337px;
+  float:right;
+  position:relative;
+  margin-top: 5px;
   /* margin:20px; */
   background-color: #F7F7FF;
   color:#577399;
@@ -49,7 +49,7 @@ img{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  margin-top: 60px; 
+  /* margin-top: 60px;  */
 } 
 
 h1 {
@@ -59,9 +59,21 @@ h1 {
 }
 
 div{
-padding-top: 5px;
+/* padding-top: 5px; */
 }
 
 #fb{
 margin-left: 20px;
+}
+
+#li{
+  margin-left: 20px;
+}
+
+#pin{
+  margin-left: 20px;
+}
+
+#link{
+  margin-left: 20px;
 }

@@ -41,7 +41,7 @@ class User extends React.Component {
     this.getProfile();
     return (
       <>
-        <h1>WELCOME TO THE USER PAGE</h1>
+        <h1>Welcome To The User Page!</h1>
         <Profile />
         <ProfileForm />
         <SavedSearches />
