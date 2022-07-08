@@ -11,8 +11,6 @@ class EventDisplay extends React.Component {
     };
   }
 
-  // required props - eventData[] (.img and .name and .url?)
-
 
   handleEvents = async () => {
     console.log('handleEvents fired');
@@ -31,6 +29,7 @@ class EventDisplay extends React.Component {
     } catch (error) {
       console.log(error.message);
     }
+
   };
 
   arrayOfCards = (event, idx) => {
@@ -50,9 +49,10 @@ class EventDisplay extends React.Component {
     );
   };
 
+
+
   render() {
-    if (!this.state.events)
-      this.handleEvents();
+    this.handleEvents();
 
     return (
       <>
