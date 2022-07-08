@@ -1,43 +1,64 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import axios from 'axios';
 
 class EventDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      event: '',
+      events: '',
     };
   }
 
   // required props - eventData[] (.img and .name and .url?)
 
+
+  handleEvents = async () => {
+    console.log('handleEvents fired');
+    let backendURL = `${process.env.REACT_APP_SERVER_URL}/Entertainment?cityName=${this.props.cityName}`;
+    try {
+      let returnedEventData = await axios.get(backendURL);
+      returnedEventData = returnedEventData.data;
+      console.log("This is EVENT data from backed: ", returnedEventData);
+      let eventCards = returnedEventData.map((event, idx) => {
+        return this.arrayOfCards(event, idx);
+      });
+      console.log('array of EVENT cards', eventCards);
+      this.setState({
+        events: eventCards,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  arrayOfCards = (event, idx) => {
+    return (
+      <div key={idx}>
+        <Card className='eventCard'>
+          <Card.Img variant='top' src={event.img_url} />
+          <Card.Body>
+            <Card.Title>{event.name}</Card.Title>
+            <Card.Text>
+              {event.dateTime}
+            </Card.Text>
+            <Button variant="primary" href={event.url}>Link to TicketMaster</Button>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+  };
+
   render() {
-
-    let eventCards = this.props.eventData.map((day, idx) => {
-      return (
-        <div key={idx}>
-          <Card className='eventCard'>
-            <Card.Img variant='top' src='{this.props.eventData.img}' />
-            <Card.Body>
-              <Card.Title>{this.props.eventData.name}</Card.Title>
-              <Card.Text>
-                {day.description}
-              </Card.Text>
-              <Button variant="primary" href={this.props.eventData.url}>Link to TicketMaster</Button>
-            </Card.Body>
-          </Card>
-        </div>
-      );
-    });
-
+    if (!this.state.events)
+      this.handleEvents();
 
     return (
       <>
         <h2> Here are the events happening in your destination city:</h2>
         <div className='eventsDiv'>
-          {eventCards}
+          {this.state.events}
         </div>
       </>
     );
