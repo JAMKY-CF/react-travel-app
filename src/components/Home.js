@@ -7,8 +7,8 @@ import '../css/weatherDisplay.css';
 //import { Auth0Client } from '@auth0/auth0-spa-js';
 import { withAuth0 } from '@auth0/auth0-react';
 import WeatherDisplay from './WeatherDisplay';
-import SavedSearches from './SavedSearches';
-import EventDisplay from './eventDisplay';
+//import SavedSearches from './SavedSearches';
+//import EventDisplay from './eventDisplay';
 
 class Home extends React.Component {
   constructor(props) {
@@ -26,9 +26,9 @@ class Home extends React.Component {
 
 
   render() {
-    let searchData=[{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'},{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'},{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'}];
-    let weatherData=[{date:'2022-07-09',description:'A wonderful day'},{date:'2022-07-09',description:'A wonderful day'},{date:'2022-07-09',description:'A wonderful day'}];
-    let eventData=[{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'},{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'},{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'}];
+    // let searchData=[{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'},{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'},{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'}];
+    // let weatherData=[{date:'2022-07-09',description:'A wonderful day'},{date:'2022-07-09',description:'A wonderful day'},{date:'2022-07-09',description:'A wonderful day'}];
+    // let eventData=[{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'},{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'},{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'}];
 
 
     return (
@@ -37,9 +37,9 @@ class Home extends React.Component {
         {/* {this.props.auth0.isAuthenticated && !this.state.hasSearched ? */}
         <>
           <SearchForm />
-          <SavedSearches searchData={searchData}/>
-          <EventDisplay eventData={eventData}/>
-          <WeatherDisplay weatherData={weatherData}/>
+          {/* <SavedSearches searchData={searchData}/>
+          <EventDisplay eventData={eventData}/> */}
+          <WeatherDisplay cityName={'seattle'} />
         </>
         {/* : <SearchForm />
         } */}
