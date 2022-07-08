@@ -9,9 +9,9 @@ function BasicButtonOne() {
 
 
     <DropdownButton id="dropdownBtn" title="Menu" variant=''>
+      <Dropdown.Item href="/">Home</Dropdown.Item>
       <Dropdown.Item href="/user">Profile</Dropdown.Item>
       <Dropdown.Item href="/about">About</Dropdown.Item>
-      <Dropdown.Item href="/">Home</Dropdown.Item>
     </DropdownButton>
   );
 }

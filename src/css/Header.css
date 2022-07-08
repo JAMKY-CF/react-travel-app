@@ -23,9 +23,9 @@
 }
 
 #logoutBtn{
-  float:left;
+  float:right;
   position:relative;
-  margin:20px;
+  margin-top: 5px;
   background-color: #F7F7FF;
   color:#577399;
 }

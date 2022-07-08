@@ -53,7 +53,7 @@ class ProfileForm extends React.Component {
     return (
       <>
         <img src={this.props.user.picture} alt={profileResults.name} />
-        <Form onSubmit={this.handleFormSave}>
+        <Form id='form' className='m-5'onSubmit={this.handleFormSave} style={{ width: '80rem'}}>
           <Form.Group className="userInfoForm" controlId="formName">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" defaultValue={profileResults.name} placeholder="Name..." />
@@ -76,7 +76,7 @@ class ProfileForm extends React.Component {
             <Form.Label>Location</Form.Label>
             <Form.Control type="text" defaultValue={profileResults.location} />
           </Form.Group>         
-          <Button variant="primary" type="submit">
+          <Button className='mt-2'variant="primary" type="submit">
             Save
           </Button>
         </Form>

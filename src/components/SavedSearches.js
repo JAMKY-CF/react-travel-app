@@ -25,7 +25,7 @@ class SavedSearches extends React.Component {
 
   arrayOfAccordions = (data, idx) => {
     return (
-      <Accordion key={idx} >
+      <Accordion className='m-5'key={idx} style={{ width: '80rem'}} >
         <Accordion.Item eventKey={idx}>
           <Accordion.Header>{data.location}</Accordion.Header>
           <Accordion.Body>
@@ -65,7 +65,7 @@ class SavedSearches extends React.Component {
 
     return (
       <>
-        <h2>Your destination search results: </h2>
+        <h2 className='m-5'>Your destination search results: </h2>
         <div className='savedSearchDiv'>
           {this.state.accordions}
         </div>
