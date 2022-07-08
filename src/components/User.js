@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-//import ProfileForm from './ProfileForm';
+import ProfileForm from './ProfileForm';
 import Profile from './Profile';
 import { withAuth0 } from '@auth0/auth0-react';
 
@@ -41,7 +41,7 @@ class User extends React.Component {
       <>
         <h1>WELCOME TO THE USER PAGE</h1>
         <Profile />
-        {/* <ProfileForm /> */}
+        <ProfileForm />
         {/* <SavedSearches /> */}
       </>
     );
