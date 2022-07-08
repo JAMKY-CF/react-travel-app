@@ -32,7 +32,7 @@ class SavedSearches extends React.Component {
             <p>
               {data.location} for the date of {data.date}
             </p>
-            <Button type='submit' variant='primary' onSubmit={this.handleSearchDelete(data._id)}>Delete Search</Button>
+            <Button type='submit' variant='primary' onSubmit={() => this.handleSearchDelete(data._id)}>Delete Search</Button>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -57,10 +57,11 @@ class SavedSearches extends React.Component {
     }
   };
 
+  componentDidMount(){
+    this.getSavedSearches();
+  }
 
   render() {
-
-    this.getSavedSearches();
 
     return (
       <>

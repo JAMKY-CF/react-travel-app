@@ -45,10 +45,19 @@ class WeatherDisplay extends React.Component {
     );
   };
 
+  componentDidMount() {
+    this.handleWeather();
+  }
+
+  
+  componentDidUpdate(prevProps){
+    if(this.props.cityName !== prevProps.cityName){
+      this.handleWeather();
+    }
+  }
 
   render() {
-    if(!this.state.weatherCards)
-      this.handleWeather();
+    // if(!this.state.weatherCards)
 
 
     return (
