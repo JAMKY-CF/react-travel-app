@@ -33,6 +33,7 @@ class Home extends React.Component {
 
   render() {
     let toBeCalled;
+    console.log('LINE 36  HOME: ', this.state.city);
     if (this.state.hasSearched) {
       toBeCalled = (
         <>

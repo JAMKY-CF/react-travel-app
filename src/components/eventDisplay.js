@@ -49,11 +49,19 @@ class EventDisplay extends React.Component {
     );
   };
 
+  componentDidMount() {
+    this.handleEvents();
+  }
+
+  componentDidUpdate(prevProps){
+    if(this.props.cityName !== prevProps.cityName){
+      this.handleEvents();
+    }
+  }
 
 
   render() {
-    this.handleEvents();
-
+    console.log('event PROPS: ', this.props);
     return (
       <>
         <h2> Destination events:</h2>
