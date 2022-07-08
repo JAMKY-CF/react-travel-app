@@ -7,7 +7,6 @@ import '../css/weatherDisplay.css';
 //import { Auth0Client } from '@auth0/auth0-spa-js';
 import { withAuth0 } from '@auth0/auth0-react';
 import WeatherDisplay from './WeatherDisplay';
-//import SavedSearches from './SavedSearches';
 import EventDisplay from './eventDisplay';
 
 class Home extends React.Component {
@@ -15,6 +14,8 @@ class Home extends React.Component {
     super(props);
     this.state = {
       hasSearched: false,
+      city:'',
+      date:'',
     };
   }
 
@@ -37,7 +38,6 @@ class Home extends React.Component {
         {/* {this.props.auth0.isAuthenticated && !this.state.hasSearched ? */}
         <>
           <SearchForm />
-          {/* <SavedSearches searchData={searchData}/> */}
           <EventDisplay cityName={'seattle'} />
           <WeatherDisplay cityName={'seattle'} />
         </>
