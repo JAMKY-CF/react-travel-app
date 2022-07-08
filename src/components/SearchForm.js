@@ -30,6 +30,7 @@ class SearchForm extends React.Component {
     //console.log('The date selected: ', this.state.selectedDate);
     // api call to 3001 server at path '3001
     // or call function at home to populate wx display and event display
+    //<WeatherDisplay cityName=cityfrom Form/>
   };
 
   handleOnInput = (e) => {
