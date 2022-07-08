@@ -53,7 +53,7 @@ class WeatherDisplay extends React.Component {
 
     return (
       <>
-        <h2>Here is the weather forecast for your destination city: </h2>
+        <h2>Destination forecast: </h2>
         <div className='weatherDiv'>
           {this.state.weatherCards}
 

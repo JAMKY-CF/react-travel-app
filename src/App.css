@@ -3,27 +3,28 @@
   flex-direction: column;
   justify-content: center;
   min-width: 99vw;
-  background-image:url('./images/pexels-rifqi-ramadhan-788200.jpg');
-  background-color: green;
+  background-image:url('./images/bg-img.png');
+  background-size: cover;
+  background-color: #BDD5EA;
 
 }
 h1,h2{
   font-size: xx-large;
-  color: palegoldenrod;
+  color: #FE5F55;
 }
 #app-header{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-height:20vh;
   /* flex for the buttons and logo */
 }
 #app-main{
-  border: 2px solid rgb(199, 209, 5);
+  /* border: 2px solid rgb(199, 209, 5); */
   min-height:65vh;
   /* height:70vh; */
 }
 
 #app-footer{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-height:10vh;
-  background-color: moccasin;
+  /* background-color: moccasin; */
 }

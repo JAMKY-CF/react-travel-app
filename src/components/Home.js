@@ -33,7 +33,7 @@ class Home extends React.Component {
 
     return (
       <div id='home'>
-        <h1>THIS IS THE HOME PAGE. WELCOME.</h1>
+        <h1>Welcome To Dream Vacation!</h1>
         {/* {this.props.auth0.isAuthenticated && !this.state.hasSearched ? */}
         <>
           <SearchForm />

@@ -1,3 +1,8 @@
 .weatherCard{
-  border:4px solid orange;
+  /* border:4px solid orange; */
+}
+
+h2{
+  margin-bottom: 40px;
+
 }

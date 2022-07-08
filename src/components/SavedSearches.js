@@ -31,7 +31,7 @@ class SavedSearches extends React.Component {
 
     return (
       <>
-        <h2> Here are your destination search results: </h2>
+        <h2>Your destination search results: </h2>
         <div className='savedSearchDiv'>
           {searchAccordions}
         </div>
