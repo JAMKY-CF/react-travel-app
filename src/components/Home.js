@@ -41,7 +41,7 @@ class Home extends React.Component {
           <WeatherDisplay cityName={this.state.city} />
         </>);
     } else {
-      toBeCalled = <h2>has searched = false</h2>;
+      toBeCalled = '';
     }
 
     return (
