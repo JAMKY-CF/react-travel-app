@@ -75,8 +75,7 @@ class ProfileForm extends React.Component {
           <Form.Group className="userInfoForm" controlId="formLocation">
             <Form.Label>Location</Form.Label>
             <Form.Control type="text" defaultValue={profileResults.location} />
-          </Form.Group>
-          {/* save button updates profile form */}
+          </Form.Group>         
           <Button variant="primary" type="submit">
             Save
           </Button>

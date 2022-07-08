@@ -14,36 +14,48 @@ class Home extends React.Component {
     super(props);
     this.state = {
       hasSearched: false,
-      city:'',
-      date:'',
+      city: '',
+      date: '',
     };
   }
 
-  handleSearchResults = () => {
+  handleSearchResults = (infoToPass) => {
+    console.log('home handle search fired', infoToPass);
     // receive results from search from to server call or make server call here to display
     // results to the home page. should populate weather and eventdata
-
+    this.setState({
+      city: infoToPass.location,
+      date: infoToPass.date,
+      hasSearched: true,
+    });
   };
 
 
   render() {
-    // let searchData=[{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'},{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'},{cityName:'Seattle',date:'2022-07-09',imgURL:'abc.jpg'}];
-    // let weatherData=[{date:'2022-07-09',description:'A wonderful day'},{date:'2022-07-09',description:'A wonderful day'},{date:'2022-07-09',description:'A wonderful day'}];
-    // let eventData=[{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'},{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'},{name:'Sounders Game',description:'A soccer match at a stadium.',url:'./#'}];
-
+    let toBeCalled;
+    if (this.state.hasSearched) {
+      toBeCalled = (
+        <>
+          <EventDisplay cityName={this.state.city} />
+          <WeatherDisplay cityName={this.state.city} />
+        </>);
+    } else {
+      toBeCalled = <h2>has searched = false</h2>;
+    }
 
     return (
       <div id='home'>
         <h1>Welcome To Dream Vacation!</h1>
         {/* {this.props.auth0.isAuthenticated && !this.state.hasSearched ? */}
+        <SearchForm handleSearchResults={this.handleSearchResults} />
+        {/* this.state.hasSearched ? (
         <>
-          <SearchForm />
-          <EventDisplay cityName={'seattle'} />
-          <WeatherDisplay cityName={'seattle'} />
+          <EventDisplay cityName={this.state.city} />
+          <WeatherDisplay cityName={this.state.city} />
         </>
-        {/* : <SearchForm />
-        } */}
-
+        )
+        : <h2>hasSearched=== false</h2> */}
+        {toBeCalled}
       </div>
     );
   }
