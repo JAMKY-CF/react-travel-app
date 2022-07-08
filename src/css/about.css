@@ -1,7 +1,13 @@
+h1{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 #about{
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  border:2px solid blue;
+  /* border:2px solid blue; */
   align-items: center;
+  justify-content: space-around;
 }
