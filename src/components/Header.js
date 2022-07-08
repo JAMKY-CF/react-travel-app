@@ -5,7 +5,8 @@ import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import Navdropdown from './Navdropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faFacebook, faLinkedinIn, faPinterest } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 //import { Image } from 'react-bootstrap';
 //import ReactDOM from 'react-dom/client';
@@ -16,13 +17,23 @@ class Header extends React.Component {
 
     return (
       <>
-        <FontAwesomeIcon icon="facebook" />
-        {/* <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-        <FontAwesomeIcon icon="fa-brands fa-pinterest" />
-        <FontAwesomeIcon icon="fa-solid fa-link" /> */}
+        <div>
+          <a id="fb" href = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjamky-react-travel-app-dev.netlify.app%2F&quote=">
+            <FontAwesomeIcon icon={faFacebook}/>
+          </a>
+          <a id="li" href = "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjamky-react-travel-app-dev.netlify.app%2F">
+            <FontAwesomeIcon icon={faLinkedinIn}/>
+          </a>
+          <a id="pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjamky-react-travel-app-dev.netlify.app%2F&media=&description=">
+            <FontAwesomeIcon icon={faPinterest}/>
+          </a>
+          <a id="link" href="https://www.shareaholic.com/share/copy/?link=https%3A%2F%2Fjamky-react-travel-app-dev.netlify.app%2F&title=&notes=">
+            <FontAwesomeIcon icon={faLink}/>
+          </a>
+        </div>
+        <img src="https://i.imgur.com/wLersBW.png" alt="Dream Vacations" />
         <Navdropdown />
         {this.props.auth0.isAuthenticated ? <LogoutButton /> : <LoginButton />}
-        <img src="holder.js/100px180" />
       </>
     );
   }

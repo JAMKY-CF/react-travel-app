@@ -35,7 +35,7 @@ class EventDisplay extends React.Component {
 
     return (
       <>
-        <h2> Here are the events happening in your destination city:</h2>
+        <h2> Destination events:</h2>
         <div className='eventsDiv'>
           {eventCards}
         </div>
