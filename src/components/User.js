@@ -24,6 +24,7 @@ class User extends React.Component {
           headers: { 'Authorization': `Bearer ${jwt}` }
         };
         let profileResults = await axios(config);
+        profileResults=profileResults.data;
         console.log('Profile results from server',profileResults);
       }
     } catch (error) {
